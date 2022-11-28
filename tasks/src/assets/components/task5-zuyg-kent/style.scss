@@ -1,0 +1,45 @@
+section {
+    padding: 40px;
+}
+
+.input5 {
+    width: 80px;
+    height: 35px;
+    padding: 3px 5px;
+    border: 1px solid purple;
+    margin-bottom: 15px;
+}
+
+button {
+    width: 100px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: purple;
+    color: white;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.flex-div {
+    display: flex;
+}
+
+.xumb {
+    width: 150px;
+    min-height: 200px;
+    padding: 10px;
+    border: 1px solid purple;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px;
+    .box-title {
+        color: purple;
+        margin-bottom: 5px;
+    }
+    li {
+        list-style: decimal;
+    }
+}
