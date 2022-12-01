@@ -25,7 +25,19 @@ const SameInputs = () => {
     }
     return <section>
         <label htmlFor="">
-            {!input1Value && !input1Value ? <input type="text"
+            <input type="text"
+                className={`inputs ${input1Value.length && isEqual ? 'green' : ''}
+                                   ${input1Value.length && !isEqual ? 'red' : ''}`}
+                value={input1Value}
+                onChange={handleChangeInput1} />
+            <input type="text"
+                className={`inputs ${input2Value.length && isEqual ? 'green' : ''}
+                                   ${input2Value.length && !isEqual ? 'red' : ''}`}
+                value={input2Value}
+                onChange={handleChangeInput2} />
+
+            {/* kaaam mi qich erkar */}
+            {/* {!input1Value && !input1Value ? <input type="text"
                 className="inputs"
                 value={input1Value}
                 onChange={handleChangeInput1} /> : <input type="text"
@@ -39,15 +51,7 @@ const SameInputs = () => {
                 onChange={handleChangeInput2} /> : <input type="text"
                     className={isEqual ? "inputs green" : "inputs red"}
                     value={input2Value}
-                    onChange={handleChangeInput2} />}
-            {/* <input type="text"
-                className={isEqual ? "inputs green" : "inputs red"}
-                value={input1Value}
-                onChange={handleChangeInput1} />
-            <input type="text"
-                className={isEqual ? "inputs green" : "inputs red"}
-                value={input2Value}
-                onChange={handleChangeInput2} /> */}
+                    onChange={handleChangeInput2} />} */}
         </label>
         <button onClick={handleClickCompare}>Compare</button>
     </section>

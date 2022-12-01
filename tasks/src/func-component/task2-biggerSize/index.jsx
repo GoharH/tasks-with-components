@@ -6,12 +6,12 @@ const BigSizeInput = () => {
 
     const [fontSize, setFontSize] = useState(12)
 
-    let textFS = + fontSize
 
     const handleChange = (e) => {
         setInputValue(e.target.value)
     }
     const handleChangeSize = () => {
+        let textFS = + fontSize
         setFontSize(textFS + 2)
     }
     return <section >
@@ -19,7 +19,7 @@ const BigSizeInput = () => {
             <input type="text" value={inputValue} onChange={handleChange} className='input' />
         </label>
         <div className="flex">
-            <p style={{ fontSize: textFS }}>{inputValue}</p>
+            <p style={{ fontSize: fontSize + 'px' }}>{inputValue}</p>
             <button onClick={handleChangeSize}>Bigger</button>
         </div>
     </section>

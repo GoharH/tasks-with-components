@@ -16,6 +16,14 @@ const InputNum = () => {
             // console.log(numbers)
             setNumbers([...numbers])
         }
+
+        //kam
+        // let newNum =[]
+        // for (let i = 0; i <= inputNumber; i++) {
+        //     newNum.push(i)
+        // }
+        // setNumbers(newNum)
+
     }
     return <section>
         <label htmlFor="">
@@ -26,8 +34,6 @@ const InputNum = () => {
         {numbers.map((item, index) => {
             return (item % 2 === 0) ? <p key={index} style={{ color: "red" }}>{item}</p> : <p key={index} style={{ color: "black" }}>{item}</p>
         })}
-        {console.log(numbers)}
-
     </section>
 }
 export default InputNum
