@@ -10,19 +10,11 @@ const InputNum = () => {
         setInputNumber(e.target.value)
     }
     const handleClick = () => {
+        let newNum = []
         for (let i = 0; i <= inputNumber; i++) {
-            //console.log(i)
-            numbers.push(i)
-            // console.log(numbers)
-            setNumbers([...numbers])
+            newNum.push(i)
         }
-
-        //kam
-        // let newNum =[]
-        // for (let i = 0; i <= inputNumber; i++) {
-        //     newNum.push(i)
-        // }
-        // setNumbers(newNum)
+        setNumbers(newNum)
 
     }
     return <section>
