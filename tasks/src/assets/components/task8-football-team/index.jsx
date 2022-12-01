@@ -4,18 +4,20 @@ import './style.scss'
 class FootballTeam extends React.Component {
     state = {
         players: ['Messi', 'Lewandowski', 'Ronaldo', 'Pedri', 'Neymar', 'Xavi', 'Ronaldinho', 'Mbape', 'Salah', 'Casillas', 'Jorginho', 'Runi', 'Mendy', 'Junior', 'Zidan', 'Backham', 'Kane', 'Dias', 'Silva', 'Kante'],
-        teamPlayers: ['Messi', 'Lewandowski', 'Ronaldo', 'Pedri', 'Neymar', 'Xavi', 'Ronaldinho', 'Mbape', 'Salah', 'Casillas', 'Jorginho', 'Runi', 'Mendy', 'Junior', 'Zidan', 'Backham', 'Kane', 'Dias', 'Silva', 'Kante'],
+        teamPlayers: [],
     }
 
     handleClick = () => {
-        let { teamPlayers } = this.state
-        this.setState(teamPlayers.sort(() => Math.random() - 0.5))
+        let { players } = this.state
+        let x = [...players]
+        x.sort(() => Math.random() - 0.5)
+        this.setState({ teamPlayers: x })
     }
 
     render() {
         return <section>
             <div>
-                <button onClick={this.handleClick}>Create a team</button>
+                <button onClick={this.handleClick} className='team-btn'>Create a team</button>
             </div>
             <div className="flex-box">
                 <div className="team">

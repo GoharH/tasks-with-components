@@ -39,7 +39,27 @@ button {
         color: purple;
         margin-bottom: 5px;
     }
-    li {
-        list-style: decimal;
+    .new-list {
+        counter-reset: section;
+    }
+    .list-item {
+        position: relative;
+        padding-left: 25px;
+    }
+    .new-list .list-item::before {
+        counter-increment: section;
+        content: counter(section);
+        //content: "Section" counter(section) ":";          // kgri __ Section1: Armen
+        width: 20px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(128, 0, 128, 0.579);
+        color: white;
+        font-size: 12px;
+        border-radius: 50%;
+        position: absolute;
+        left: 0;
     }
 }

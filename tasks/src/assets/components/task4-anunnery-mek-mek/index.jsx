@@ -27,20 +27,30 @@ class TwoTeam extends React.Component {
             <div className="group-boxes">
                 <div className="xumb1">
                     <p className="box-title">Group 1</p>
-                    <ul>
+                    <p className="new-list">
                         {this.state.nameList.map((item, index) => {
-                            return (index % 2 === 0) ? <li key={index} item={this.state}> {item}</li> : null
+                            return (index % 2 === 0) ? <p key={index} className='list-item'> {item}</p> : null
                         })}
-                    </ul>
+
+                        {/* kam index-ov */}
+                        {/* {this.state.nameList.filter((x, i) => i % 2 === 0).map((item, index) => {
+                            return <li key={index} item={this.state}> {index + 1}. {item}</li>
+                        })} */}
+                    </p>
 
                 </div>
                 <div className="xumb1">
                     <p className="box-title">Group 2</p>
-                    <ul>
+                    <p className="new-list">
                         {this.state.nameList.map((item, index) => {
-                            return (index % 2 === 0) ? null : <li key={index} item={this.state}> {item}</li>
+                            return (index % 2 === 0) ? null : <p key={index} className='list-item'> {item}</p>
                         })}
-                    </ul>
+
+                        {/* kam index-ov */}
+                        {/* {this.state.nameList.filter((x, i) => !(i % 2 === 0)).map((item, index) => {
+                            return <li key={index} item={this.state}> {index + 1}.{item}</li>
+                        })} */}
+                    </p>
                 </div>
             </div>
 

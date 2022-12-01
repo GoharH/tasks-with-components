@@ -34,7 +34,7 @@ class FourButtons extends React.Component {
 
     handleClick = (elem) => {
         let newInfo = []
-        if (elem !== 'none') {
+        if (elem) {
             newInfo = this.state.information.filter(x => x.id === elem)
             console.log(newInfo)
         }
@@ -43,14 +43,17 @@ class FourButtons extends React.Component {
     render() {
         return <section>
             <div className="flex-box">
-                <button className="btn" onClick={() => this.handleClick('1')}> 1</button>
+                {this.state.information.map((item, index) => {
+                    return <button className="btn" onClick={() => this.handleClick(item.id)}> {item.id}</button>
+                })}
+                {/* <button className="btn" onClick={() => this.handleClick('1')}> 1</button>
                 <button className="btn" onClick={() => this.handleClick('2')}> 2</button>
                 <button className="btn" onClick={() => this.handleClick('3')}> 3</button>
-                <button className="btn" onClick={() => this.handleClick('4')}> 4</button>
+                <button className="btn" onClick={() => this.handleClick('4')}> 4</button> */}
             </div>
             <div className="info-box">
                 {this.state.choosen.map((item, index) => {
-                    return <div className="box" key={index} item={this.state}>
+                    return <div className="box" key={index} >
                         <h2>{item.title}</h2>
                         <p>{item.description}</p>
                     </div>
