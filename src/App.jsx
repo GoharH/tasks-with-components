@@ -8,11 +8,14 @@ import './App.css';
 //import FootballTeam from './assets/components/task8-football-team';
 //import FourButtons from './assets/components/task9--4-button';
 //import InputSelect from './assets/components/task6-select-input';
-import NameBTN from './func-component/task1_button-name';
-import BigSizeInput from './func-component/task2-biggerSize';
-import SameInputs from './func-component/task3_same-inputs';
-import InputNum from './func-component/task4_input-zuyg-kent'
-
+//import NameBTN from './func-component/task1_button-name';
+//import BigSizeInput from './func-component/task2-biggerSize';
+//import SameInputs from './func-component/task3_same-inputs';
+//import InputNum from './func-component/task4_input-zuyg-kent'
+import BgColorBox from './func-component/task5-bgcolor-box';
+import ImagesAfterTime from './func-component/task6-adding-images';
+import RandomNumber from './func-component/task7-loading-till-700';
+import InputChange from './func-component/task8-input-useEffect';
 
 function App() {
   return <>
@@ -26,10 +29,16 @@ function App() {
     {/* <FootballTeam /> */}
     {/* <FourButtons /> */}
     {/* <InputSelect /> */}
-    <NameBTN />
+    {/* <NameBTN />
     <BigSizeInput />
     <SameInputs />
-    <InputNum />
+    <InputNum /> */}
+
+    {/* ______________________ */}
+    <BgColorBox />
+    {/* <ImagesAfterTime /> */}
+    {/* <RandomNumber /> */}
+    {/* <InputChange /> */}
   </>
 }
 
