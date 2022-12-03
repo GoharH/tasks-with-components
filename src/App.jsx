@@ -37,7 +37,7 @@ function App() {
     {/* ______________________ */}
     <BgColorBox />
     {/* <ImagesAfterTime /> */}
-    {/* <RandomNumber /> */}
+    <RandomNumber />
     {/* <InputChange /> */}
   </>
 }

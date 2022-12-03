@@ -3,16 +3,10 @@ import './style.scss';
 import image1 from '../../assets/images/smile.jpg';
 
 const RandomNumber = () => {
-    //const [image, setImage] = useState({ image: image1 })
+    //const [image] = useState({ image: image1 })
+    // qani, vor function-y chenq ogtagorcelu, el chenq grum setImage-y
     const [number, setNumber] = useState()
 
-
-
-    // useEffect(() => {
-    //     setImage([
-    //         { image: image1 },
-    //     ])
-    // }, [])
 
     useEffect(() => {
         const randomNumber = Math.floor(Math.random() * 1000)
@@ -21,6 +15,7 @@ const RandomNumber = () => {
 
     return <div className="R-section">
         {number > 500 ? <span className="image-R" style={{ backgroundImage: `url(${image1})` }}></span> : <p>Try one more time</p>}
+        {/* ete grenq useState-ov , apa style-y klini____  backgroundImage: `url(${image.image})` */}
     </div>
 
 }
