@@ -12,10 +12,12 @@ import './App.css';
 //import BigSizeInput from './func-component/task2-biggerSize';
 //import SameInputs from './func-component/task3_same-inputs';
 //import InputNum from './func-component/task4_input-zuyg-kent'
-import BgColorBox from './func-component/task5-bgcolor-box';
-import ImagesAfterTime from './func-component/task6-adding-images';
-import RandomNumber from './func-component/task7-loading-till-700';
-import InputChange from './func-component/task8-input-useEffect';
+//import BgColorBox from './func-component/task5-bgcolor-box';
+//import ImagesAfterTime from './func-component/task6-adding-images';
+//import RandomNumber from './func-component/task7-loading-till-700';
+//import InputChange from './func-component/task8-input-useEffect';
+//import InputWithRef from './func-component/task9-input-with-ref';
+import UserCompoAPI from './func-component/task10-usersAPI'
 
 function App() {
   return <>
@@ -35,10 +37,12 @@ function App() {
     <InputNum /> */}
 
     {/* ______________________ */}
-    <BgColorBox />
+    {/* <BgColorBox /> */}
     {/* <ImagesAfterTime /> */}
-    <RandomNumber />
+    {/* <RandomNumber /> */}
     {/* <InputChange /> */}
+    {/* <InputWithRef /> */}
+    <UserCompoAPI />
   </>
 }
 
